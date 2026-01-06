@@ -22,8 +22,8 @@ API REST de recetas con CRUD completo y autenticación JWT
 
 ## Instalación
 ```Bash
-git clone ""
-cd "nombre"
+git clone https://github.com/VeGgExPlay/recipes-api-demo
+cd recipes-api-demo
 npm install
 ```
 
