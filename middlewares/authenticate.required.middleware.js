@@ -7,7 +7,7 @@ const authRequiredMiddleware = (req, res, next) => {
 
     try{
         const parsedToken = jwtUtils.parseToken(rawToken)
-        const decodedPayload = jwtUtils.validateAuthToken(rawToken)
+        const decodedPayload = jwtUtils.validateAuthToken(parsedToken)
 
         req.user = decodedPayload
     } catch(error) {
