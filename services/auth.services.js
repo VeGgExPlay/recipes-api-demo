@@ -46,7 +46,7 @@ const logoutService = async(rawRefreshToken) => {
 
     if(!userInDb) throw {status: 404, message: "No se encontró el usuario"}
 
-    const tokenDoc = userInDb.refreshTokens.find({token: refreshToken})
+    const tokenDoc = userInDb.refreshTokens.find(item => item.token === refreshToken)
 
     userInDb.refreshTokens.pull({_id: tokenDoc._id})
     await userInDb.save()
